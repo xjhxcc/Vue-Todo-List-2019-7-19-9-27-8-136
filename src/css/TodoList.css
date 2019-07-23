@@ -1,0 +1,74 @@
+#app {
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border-radius: 5px;
+  }
+ #inputText{
+    width: 350px;
+    height: 20px;
+  }
+  
+#addButton{
+      background-color: #fc999b;
+      color: #ffffff;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 2px;
+      padding: 5px 15px;
+  }
+  #list_container ol {
+    width: 362px;
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-left: 20px;
+    padding-inline-start: 40px;
+    list-style-type: decimal;
+}
+#list_container li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+#list_container ol li {
+    padding: 5px;
+    color: #000;
+    
+}
+#list_container ol li:nth-child(even) {
+    background: #f4ecec;
+    
+}
+#list_container ol li span {
+    word-break: break-all;
+    width: 70%;
+}
+#list_container .active{
+    
+    font-size: 15px
+}
+#list_container .unactive{
+    font-size: 15px;
+    color: #999;
+    text-decoration: line-through;
+}
+  #Footer li a {
+    color: #fc999b;
+    margin: 3px; 
+}
+#Footer li {
+    text-align: -webkit-match-parent;
+    display: inline;
+    margin: 0 0 5px 0;
+    padding: 8px;
+    list-style: none;
+    outline: none;
+}
+#Footer{
+    margin-left: 100px;
+    width: 350px;
+} 

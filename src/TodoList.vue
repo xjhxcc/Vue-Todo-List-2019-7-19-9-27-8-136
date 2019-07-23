@@ -19,14 +19,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  padding: 20px;
-  width: 600px;
-  margin: 0 auto;
-  margin-top: 40px;
-  background: white;
-  border-radius: 5px;
-}
-</style>
