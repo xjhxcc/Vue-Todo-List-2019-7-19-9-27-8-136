@@ -1,27 +1,47 @@
 <template>
-  <div>
     <div>
-      <span>
-        <input type="text" class="inputText" v-model="inputTaskName" v-on:keyup.enter="addItem" />
-      </span>
-      <div class="addButton" v-on:click="addItem">Add</div>
+        <input id="inputText" v-model="value" @keypress.enter="addByKeypress"/>
+        <button id="addButton" @click="handleClickAdd">Add</button>
     </div>
-    <br />
-  </div>
 </template>
+
 <script>
 export default {
-  name: "InpurBar",
-  data() {
-    return {
-      inputTaskName: ""
-    };
-  },
-  methods: {
-    addItem: function() {
-        this.$emit('get-input-task-name', this.inputTaskName);
-        this.inputTaskName = "";
+    data(){
+        return{
+            value:''
+        }
+    },
+    methods:{
+        handleClickAdd(){
+            let item = {
+                value: this.value,
+                editable: false,
+                finished: false
+            }
+            this.$store.commit('addAllitems', item);
+            this.value=''
+        },
+        addByKeypress(){
+            this.handleClickAdd()
+        }
     }
-  }
-};
+}
 </script>
+
+<style>
+#inputText{
+  width: 400px;
+  height: 30px;
+}
+#addButton{
+    height: 40px;
+    display: inline-flex;
+    background-color: #fc999b;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 2px;
+    padding: 5px 15px;
+}
+</style>
